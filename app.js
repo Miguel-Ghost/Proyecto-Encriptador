@@ -40,7 +40,7 @@ function mostrarResultado(texto) {
     if (texto.trim() === '') {
         outputSection.innerHTML = `
             <div id="result">
-                <img src="imagenes/imagen.png" alt="Ícono de diamante">
+                <img src="imagenes/imagen.png" alt="">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
