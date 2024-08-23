@@ -49,12 +49,16 @@ function mostrarResultado(texto) {
         outputSection.innerHTML = `
             <div id="result">
                 <p>${texto}</p>
-                <button class= "copiar" onclick="copiarTexto()">Copiar</button>
             </div>
+            <button class="copiar" onclick="copiarTexto()">Copiar</button>
         `;
+        
+        
+        const resultContainer = document.getElementById('result');
+        const copiarButton = outputSection.querySelector('.copiar');
+        resultContainer.style.height = `calc(100% - ${copiarButton.offsetHeight}px - 20px)`;
     }
 }
-
 
 function copiarTexto() {
     const textoCopiar = outputSection.querySelector('p').textContent;
@@ -69,3 +73,5 @@ desencriptarBtn.addEventListener('click', desencriptar);
 
 
 mostrarResultado('');
+
+
